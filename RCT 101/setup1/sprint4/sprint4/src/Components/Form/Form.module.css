@@ -1,0 +1,9 @@
+.formDiv {
+        width: 40%;
+        margin: "auto";
+        border: "dashed lightblue";
+        padding: "15px";
+        background-color: "teal";
+        color: "white";
+        border-radius: "10px";
+}

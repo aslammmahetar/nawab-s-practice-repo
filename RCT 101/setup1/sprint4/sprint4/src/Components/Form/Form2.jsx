@@ -54,6 +54,7 @@ function Form2() {
 
   return (
     <div
+      className="formDiv"
       style={{
         width: "40%",
         margin: "auto",
