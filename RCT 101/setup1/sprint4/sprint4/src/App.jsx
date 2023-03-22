@@ -1,7 +1,8 @@
 import "./App.css";
 import CouterWithUsrReducer from "./Components/Counter/couterWithUseReducer";
 import CouterWithUseState from "./Components/Counter/CouterWithUseState";
-import Form1 from "./Components/Form";
+import Form1 from "./Components/Form/Form1";
+import Form2 from "./Components/Form/Form2";
 
 function App() {
   return (
@@ -25,7 +26,18 @@ function App() {
         <CouterWithUseState />
         <CouterWithUsrReducer />
       </div>
-      {/* <Form1 /> */}
+      <br />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          justifyContent: "space-evenly",
+          // border: "solid black",
+        }}
+      >
+        <Form1 />
+        <Form2 />
+      </div>
     </div>
   );
 }

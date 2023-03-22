@@ -16,7 +16,7 @@ const reducer = (state, action) => {
       return (state = 0);
     }
     default: {
-      throw new Error(`Invalid Action`);
+      throw new Error(`Invalid Action :${action.type}`);
     }
   }
 };
