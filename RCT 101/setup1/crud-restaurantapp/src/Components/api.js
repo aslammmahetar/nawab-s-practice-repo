@@ -26,7 +26,7 @@ export const deleteData = (url) => {
 
 //
 export const putData = (id, data) => {
-    return axios.put({
+    return axios({
         method: "put",
         baseURL: `${baseServerUrl}/restaurants/`,
         url: `${id}`,

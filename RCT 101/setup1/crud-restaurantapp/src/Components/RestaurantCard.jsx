@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function RestDetailCard({
   id,
   image,
@@ -18,6 +20,9 @@ function RestDetailCard({
         <p>Number Of Votes : {number_of_votes}</p>
         <h3>Price Starts From : {price_starts_from}</h3>
         <button onClick={() => handleDelete(id)}>DELETE</button>
+        <Link to={`/restaurant/edit/${id}`}>
+          <button>Edit Details</button>
+        </Link>
       </div>
     </>
   );

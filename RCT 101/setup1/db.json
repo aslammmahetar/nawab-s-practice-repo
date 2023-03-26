@@ -172,11 +172,11 @@
       "image": "https://picsum.photos/200"
     },
     {
-      "name": "Taj",
-      "type": "fine_dining",
-      "rating": 3,
-      "number_of_votes": 123,
-      "price_starts_from": 1000,
+      "name": "sky",
+      "type": "fast_food",
+      "rating": 4,
+      "number_of_votes": 1234,
+      "price_starts_from": 12121,
       "image": "https://picsum.photos/200",
       "id": 21
     },
@@ -188,6 +188,24 @@
       "price_starts_from": 100,
       "image": "https://picsum.photos/200",
       "id": 22
+    },
+    {
+      "name": "vasila",
+      "type": "ethnic",
+      "rating": 3,
+      "number_of_votes": 12112,
+      "price_starts_from": 12112,
+      "image": "https://picsum.photos/200",
+      "id": 23
+    },
+    {
+      "name": "vasila",
+      "type": "ethnic",
+      "rating": 3,
+      "number_of_votes": 12112,
+      "price_starts_from": 12112,
+      "image": "https://picsum.photos/200",
+      "id": 24
     }
   ]
 }

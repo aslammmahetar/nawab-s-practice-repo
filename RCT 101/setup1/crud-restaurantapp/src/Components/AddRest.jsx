@@ -24,7 +24,9 @@ const reducer = (state, action) => {
       };
     }
     default: {
-      return;
+      return {
+        ...initstate,
+      };
     }
   }
 };
@@ -37,6 +39,7 @@ function AddRestaurant({ handlePostRequest }) {
   const handleSubimit = (e) => {
     e.preventDefault();
     handlePostRequest(state);
+    dispatch({ type: "RESET_FORM" });
   };
   const handleChage = (e) => {
     console.log(e.target.name, e.target.value);
