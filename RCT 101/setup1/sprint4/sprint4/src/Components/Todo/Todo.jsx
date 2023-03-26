@@ -4,7 +4,7 @@ import { reducer, initialState } from "./reducer";
 
 function Todo() {
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state);
+  // console.log(state);
 
   const handleAdd = (task) => {
     dispatch({ type: "ADD_TODO", sanas: task });

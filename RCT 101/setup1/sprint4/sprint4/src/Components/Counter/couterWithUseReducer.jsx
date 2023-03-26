@@ -25,7 +25,7 @@ function CouterWithUsrReducer() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const val = useReducer(reducer, initState);
-  console.log(val);
+  // console.log(val);
 
   const handleInc = () => {
     dispatch({ type: "INCREMENT_COUNT" });
