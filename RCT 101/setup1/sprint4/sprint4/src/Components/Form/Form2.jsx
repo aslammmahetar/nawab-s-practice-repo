@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useReducer } from "react";
 
 const initialState = {
@@ -47,8 +48,20 @@ function Form2() {
 
   const { userName, age, country } = state;
 
-  const UpdateDetail = () => {
-    console.log(state);
+  const UpdateDetail = async () => {
+    try {
+      let req = await fetch(
+        `https://expedia-83a97-default-rtdb.firebaseio.com/test.json`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(state),
+        }
+      );
+      console.log(req);
+    } catch (error) {}
     dispatch({ type: "RESET_VALUES" });
   };
 

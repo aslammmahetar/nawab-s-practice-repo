@@ -76,7 +76,7 @@ function AxiosReasturant() {
       ) : err ? (
         <h2>Something went worng</h2>
       ) : (
-        data.map((el) => (
+        data?.map((el) => (
           <RestaurantsDetails key={el.id} {...el} handleDelete={handleDelete} />
         ))
       )}
