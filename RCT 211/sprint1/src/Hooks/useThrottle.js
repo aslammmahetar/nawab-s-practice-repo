@@ -12,6 +12,6 @@ function useThrottle(cb, delay) {
             }, delay);
         }
     }, [delay, cb])
-    console.log(id)
+    // console.log(id)
 }
 export default useThrottle

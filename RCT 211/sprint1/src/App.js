@@ -5,6 +5,8 @@ import Timer from './Compo/Timer';
 import Scroll from './Compo/Scroll';
 import Form from './Compo/Form';
 import Timer1 from './Compo/Timer1';
+import OTPboxes from './Compo/OtpBoxes';
+import OtpBoxes2 from './Compo/Boxes/OtpBoxes2';
 
 function App() {
   return (
@@ -14,6 +16,10 @@ function App() {
       <Timer />
       <Timer1 />
       <Scroll />
+      <hr />
+      <OTPboxes />
+      <hr />
+      <OtpBoxes2 />
     </div>
   );
 }

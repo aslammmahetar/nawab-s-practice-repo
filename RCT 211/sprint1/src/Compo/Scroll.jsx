@@ -28,7 +28,7 @@ const Scroll = () => {
   }, []);
 
   return (
-    <Box position={"sticky"} top={"200px"}>
+    <Box>
       <Heading>Scroll :{number}</Heading>
     </Box>
   );
