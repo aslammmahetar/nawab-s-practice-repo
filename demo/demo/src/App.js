@@ -1,10 +1,11 @@
 import './App.css';
-import MyHeading from './Components/MyButton';
+import MyComponet from './Components/MyButton';
 
 function App() {
   return (
     <div className="App">
-      <MyHeading name={"SAM"} />
+      <MyComponet heading={"Heading 1 from My Componet "} buttonText={"Button 1"} />
+      <MyComponet heading={"Heading 2 from same Component"} buttonText={"Button 2"} />
     </div>
   );
 }

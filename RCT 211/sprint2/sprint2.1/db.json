@@ -1,0 +1,84 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "status": false
+    },
+    {
+      "title": "learn react",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "..",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "cdf",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "hii",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "hii",
+      "status": false,
+      "id": 6
+    },
+    {
+      "title": "nffdf",
+      "status": false,
+      "id": 7
+    },
+    {
+      "title": "hii",
+      "status": false,
+      "id": 8
+    },
+    {
+      "title": "xss",
+      "status": false,
+      "id": 9
+    },
+    {
+      "title": "hjh",
+      "status": false,
+      "id": 10
+    },
+    {
+      "title": "aslam",
+      "status": false,
+      "id": 11
+    },
+    {
+      "title": "ding",
+      "status": false,
+      "id": 12
+    },
+    {
+      "title": "fing",
+      "status": false,
+      "id": 13
+    },
+    {
+      "title": "fing",
+      "status": false,
+      "id": 14
+    },
+    {
+      "title": "dsdsd",
+      "status": false,
+      "id": 15
+    },
+    {
+      "title": "bhrmmm",
+      "status": false,
+      "id": 16
+    }
+  ]
+}

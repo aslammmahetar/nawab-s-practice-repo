@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "status": false
+    },
+    {
+      "title": "Aslam",
+      "status": true,
+      "id": 2
+    },
+    {
+      "title": "hello",
+      "status": true,
+      "id": 3
+    },
+    {
+      "title": "nice",
+      "status": true,
+      "id": 4
+    },
+    {
+      "title": "asasa",
+      "status": true,
+      "id": 5
+    },
+    {
+      "title": "ding",
+      "status": true,
+      "id": 6
+    }
+  ]
+}
