@@ -1,0 +1,18 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "Aslam ",
+      "image": "https://picsum.photos/200",
+      "brand": "1425",
+      "price": 212,
+      "category": "bottom-wear",
+      "gender": "male",
+      "id": 2
+    }
+  ]
+}
