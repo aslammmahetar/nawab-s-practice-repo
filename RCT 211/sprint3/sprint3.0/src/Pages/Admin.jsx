@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addProduct,
-  postFail,
-  postReq,
-  postSuc,
-} from "../Redux/ProdductReducer/action";
-import axios from "axios";
+import { addProduct } from "../Redux/ProdductReducer/action";
 
 const initialState = {
   name: "",
@@ -44,69 +38,71 @@ const Admin = () => {
 
   //
   return (
-    <DIV>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          id=""
-          placeholder="Product name"
-          value={product.name}
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <input
-          type="text"
-          name="image"
-          id=""
-          placeholder="Product image"
-          value={product.image}
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <input
-          type="text"
-          name="brand"
-          id=""
-          placeholder="Product Brand"
-          value={product.brand}
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <input
-          type="text"
-          name="price"
-          id=""
-          placeholder="Product Price"
-          value={product.price}
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <select
-          name="category"
-          id=""
-          value={product.category}
-          onChange={(e) => handleChange(e)}
-        >
-          <option value="">Select Categories</option>
-          <option value="top_wear">Top Wear</option>
-          <option value="bottom-wear">Bottom Wear</option>
-          <option value="shoes">Shoes</option>
-        </select>
-        <br />
-        <select
-          name="gender"
-          id=""
-          value={product.gender}
-          onChange={(e) => handleChange(e)}
-        >
-          <option value="">Select Gender</option>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-        <button type="submit">Submit</button>
-      </form>
-    </DIV>
+    <>
+      <DIV>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            id=""
+            placeholder="Product name"
+            value={product.name}
+            onChange={(e) => handleChange(e)}
+          />
+          <br />
+          <input
+            type="text"
+            name="image"
+            id=""
+            placeholder="Product image"
+            value={product.image}
+            onChange={(e) => handleChange(e)}
+          />
+          <br />
+          <input
+            type="text"
+            name="brand"
+            id=""
+            placeholder="Product Brand"
+            value={product.brand}
+            onChange={(e) => handleChange(e)}
+          />
+          <br />
+          <input
+            type="text"
+            name="price"
+            id=""
+            placeholder="Product Price"
+            value={product.price}
+            onChange={(e) => handleChange(e)}
+          />
+          <br />
+          <select
+            name="category"
+            id=""
+            value={product.category}
+            onChange={(e) => handleChange(e)}
+          >
+            <option value="">Select Categories</option>
+            <option value="top_wear">Top Wear</option>
+            <option value="bottom-wear">Bottom Wear</option>
+            <option value="shoes">Shoes</option>
+          </select>
+          <br />
+          <select
+            name="gender"
+            id=""
+            value={product.gender}
+            onChange={(e) => handleChange(e)}
+          >
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <button type="submit">Submit</button>
+        </form>
+      </DIV>
+    </>
   );
 };
 

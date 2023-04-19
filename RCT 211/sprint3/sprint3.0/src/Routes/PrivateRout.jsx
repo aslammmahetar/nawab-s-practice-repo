@@ -1,12 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import Admin from "../Pages/Admin";
-import Login from "../Pages/Login";
+import { Navigate, useLocation } from "react-router-dom";
 
-const PrivateRout = () => {
+const PrivateRoute = ({ children }) => {
   const auth = useSelector((store) => store.authReducer.isAuth);
-
-  return auth ? <Admin /> : <Login />;
+  //
+  const loction = useLocation();
+  //
+  return auth ? children : <Navigate state={loction.pathname} to={"/login"} />;
 };
 
-export default PrivateRout;
+export default PrivateRoute;

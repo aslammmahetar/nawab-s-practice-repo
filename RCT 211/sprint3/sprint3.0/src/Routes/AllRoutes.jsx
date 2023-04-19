@@ -2,18 +2,19 @@ import { Routes, Route } from "react-router-dom";
 import Login from "../Pages/Login";
 import React from "react";
 import Admin from "../Pages/Admin";
-import PrivateRout from "./PrivateRout";
+import PrivateRoute from "./PrivateRout";
+import HomePage from "../Pages/HomePage";
 
 const AllRoutes = () => {
   return (
     <Routes>
-      <Route path="/"></Route>
+      <Route path="/" element={<HomePage />}></Route>
       <Route
         path="/add-product"
         element={
-          <PrivateRout>
+          <PrivateRoute>
             <Admin />
-          </PrivateRout>
+          </PrivateRoute>
         }
       ></Route>
       <Route path="/login" element={<Login />}></Route>

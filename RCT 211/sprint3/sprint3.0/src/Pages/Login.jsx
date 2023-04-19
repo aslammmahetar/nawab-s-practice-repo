@@ -1,32 +1,39 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { loginFails, loginReq, loginSuc } from "../Redux/authReducer/action";
-import axios from "axios";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { handleLogin } from "../Redux/authReducer/action";
 import styled from "styled-components";
-import { store } from "../Redux/store";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmial] = useState("");
   const [password, setPassword] = useState("");
-  const auth = useSelector((store) => store.authReducer.isAuth);
-
+  const { isAuth, isError } = useSelector((store) => {
+    return {
+      isAuth: store.authReducer.isAuth,
+      isError: store.authReducer.isError,
+    };
+  }, shallowEqual);
   const dispatch = useDispatch();
-  // console.log(dispatch);
+  //
+  //
+  const location = useLocation();
+  const navigate = useNavigate();
+  console.log(location);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const loginDetail = {
       email,
       password,
     };
-    dispatch(loginReq());
-    axios
-      .post("https://reqres.in/api/login", loginDetail)
-      .then((res) => dispatch(loginSuc(res.data.token)))
-      .catch((er) => dispatch(loginFails(er.massage)));
+    //
+    dispatch(handleLogin(loginDetail)).then(() => {
+      navigate(location.state);
+    });
   };
 
   return (
-    <DIV>
+    <DIV auth={isAuth} err={isError}>
       <h1>Login Here</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -46,6 +53,9 @@ const Login = () => {
         <br />
         <input type="submit" value="Submit" />
       </form>
+      <div>
+        <h3>{isAuth ? "LOGIN SUCCESSFULL" : "LOGIN REQUIRED"}</h3>
+      </div>
     </DIV>
   );
 };
@@ -67,6 +77,9 @@ const DIV = styled.div`
   input {
     padding: 10px;
     border-radius: 7px;
-    /* border: ; */
+    border: ${({ err }) => (err ? "solid 1px red" : "solid black 1px")};
+  }
+  div {
+    color: ${({ auth }) => (auth ? "green" : "red")};
   }
 `;

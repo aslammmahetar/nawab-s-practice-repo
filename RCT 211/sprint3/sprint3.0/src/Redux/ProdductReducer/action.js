@@ -24,3 +24,11 @@ export const addProduct = (product, initialState, setProduct) => (dispatch) => {
         .catch((er) => dispatch(postFail()));
     setProduct(initialState);
 }
+
+export const getProduct = (dispatch) => {
+    dispatch(postReq())
+    axios
+        .get("http://localhost:8080/products")
+        .then((res) => dispatch(getSuc(res.data)))
+        .catch((er) => dispatch(postFail()))
+}
