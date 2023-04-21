@@ -4,6 +4,7 @@ import React from "react";
 import Admin from "../Pages/Admin";
 import PrivateRoute from "./PrivateRout";
 import HomePage from "../Pages/HomePage";
+import EditPage from "../Pages/EditPage";
 
 const AllRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const AllRoutes = () => {
           </PrivateRoute>
         }
       ></Route>
+      <Route path="/add-product/:id" element={<EditPage />}></Route>
       <Route path="/login" element={<Login />}></Route>
       <Route path="*"></Route>
     </Routes>

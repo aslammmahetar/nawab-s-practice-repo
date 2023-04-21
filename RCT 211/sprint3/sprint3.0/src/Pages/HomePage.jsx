@@ -1,14 +1,21 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { getProduct } from "../Redux/ProdductReducer/action";
 import ProductList from "../Components/ProductList";
+import SideBar from "../Components/SideBar";
+import styled from "styled-components";
 
 const HomePage = () => {
   return (
-    <div>
+    <DIV>
+      <SideBar />
       <ProductList />
-    </div>
+    </DIV>
   );
 };
 
 export default HomePage;
+const DIV = styled.div`
+  display: flex;
+  width: 90%;
+  margin: auto;
+  border: solid black;
+  justify-content: space-between;
+`;

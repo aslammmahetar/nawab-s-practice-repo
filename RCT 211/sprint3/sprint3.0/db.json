@@ -1,40 +1,76 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Men Blue Super Soft Legend T-Shirt ",
-      "image": "https://imagescdn.aeo.in/img/app/product/8/861405-10483011.jpg?w=317&auto=format",
-      "brand": "Tommy Hilfiger",
-      "price": 3000,
+      "name": "Hammer Smith",
+      "image": "https://m.media-amazon.com/images/I/618MfetuNcL._AC_UL600_FMwebp_QL65_.jpg",
+      "brand": "ding..",
+      "price": null,
       "category": "top-wear",
-      "gender": "male"
-    },
-    {
-      "name": "Men Blue Super Soft Legend T-Shirt ",
-      "image": "https://imagescdn.aeo.in/img/app/product/8/861405-10483010.jpg?auto=format",
-      "brand": "Tommy Hilfiger",
-      "price": 5000,
-      "category": "top-wear",
-      "gender": "male",
-      "id": 2
-    },
-    {
-      "name": "Men Blue AirFlex+ 9Inches Denim Short",
-      "image": "https://imagescdn.aeo.in/img/app/product/8/868676-10316577.jpg?w=317&auto=format",
-      "brand": "Adidas",
-      "price": 2500,
-      "category": "bottom-wear",
       "gender": "male",
       "id": 3
     },
     {
-      "name": "Men Grey Super Soft Legend T-Shirt",
-      "image": "https://imagescdn.aeo.in/img/app/product/8/861324-10410872.jpg?w=317&auto=format",
-      "brand": "Nike",
-      "price": 6500,
-      "category": "top_wear",
+      "name": "Dennis Lingo",
+      "image": "https://m.media-amazon.com/images/I/61XzMtVz3PL._AC_UL600_FMwebp_QL65_.jpg",
+      "brand": "Dennis",
+      "price": "99999999",
+      "category": "top-wear",
       "gender": "male",
       "id": 4
+    },
+    {
+      "name": "Laymio",
+      "image": "https://m.media-amazon.com/images/I/71MaGTXl7ML._AC_UL600_FMwebp_QL65_.jpg",
+      "brand": "Adidas",
+      "price": 144,
+      "category": "top_wear",
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "name": "GRECIILOOKS",
+      "image": "https://m.media-amazon.com/images/I/61RWJJEvIZL._AC_UL600_FMwebp_QL65_.jpg",
+      "brand": "Adidas",
+      "price": 8500,
+      "category": "bottom-wear",
+      "gender": "female",
+      "id": 7
+    },
+    {
+      "name": "Amazon Brand",
+      "image": "https://m.media-amazon.com/images/I/81M3FyCG7rL._AC_UL600_FMwebp_QL65_.jpg",
+      "brand": "ding..",
+      "price": 3600,
+      "category": "bottom-wear",
+      "gender": "female",
+      "id": 8
+    },
+    {
+      "name": "Cupid",
+      "image": "https://m.media-amazon.com/images/I/51U+dqwoYLL._AC_UL600_FMwebp_QL65_.jpg",
+      "brand": "Adidas",
+      "price": 6500,
+      "category": "bottom-wear",
+      "gender": "female",
+      "id": 9
+    },
+    {
+      "name": "Symbol",
+      "image": "https://m.media-amazon.com/images/I/718Vi99SgRL._AC_UL600_FMwebp_QL65_.jpg",
+      "brand": "Adidas",
+      "price": 650,
+      "category": "bottom-wear",
+      "gender": "female",
+      "id": 10
+    },
+    {
+      "name": "Bruton",
+      "image": "https://m.media-amazon.com/images/I/71A7mJgXCxL._AC_UL600_FMwebp_QL65_.jpg",
+      "brand": "Adidas",
+      "price": 7800,
+      "category": "shoes",
+      "gender": "male",
+      "id": 12
     }
   ]
 }

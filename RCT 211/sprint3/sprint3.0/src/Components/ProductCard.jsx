@@ -1,7 +1,15 @@
 import React from "react";
-import styled from "styled-components";
+import { useDispatch } from "react-redux";
+import { deleteProduct } from "../Redux/ProdductReducer/action";
+import { Link } from "react-router-dom";
 
-const ProductCard = ({ name, brand, category, price, image, gender }) => {
+const ProductCard = ({ id, name, brand, category, price, image, gender }) => {
+  const dispatch = useDispatch();
+
+  const handleDelete = () => {
+    dispatch(deleteProduct(id));
+  };
+
   return (
     <div>
       <img src={image} alt="" />
@@ -10,6 +18,13 @@ const ProductCard = ({ name, brand, category, price, image, gender }) => {
       <p>{gender}</p>
       <p>{brand}</p>
       <h3>{price}</h3>
+      <div>
+        <button onClick={handleDelete}>Delete</button>
+
+        <Link to={`/add-product/${id}`}>
+          <button>Edit</button>
+        </Link>
+      </div>
     </div>
   );
 };
