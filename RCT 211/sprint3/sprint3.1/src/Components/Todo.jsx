@@ -1,8 +1,14 @@
-import React, { useState } from "react";
-import TodoItem from "./TodoItem";
+import React, { useCallback, useState } from "react";
+import { TodoItem } from "./TodoItem";
+
+let initialState = [
+  { id: 1, title: "Task-1", status: true },
+  { id: 2, title: "Task-2", status: true },
+  { id: 3, title: "Task-3", status: false },
+];
 
 const Todo = () => {
-  const [task, setTask] = useState([]);
+  const [task, setTask] = useState(initialState);
   const [title, setTitle] = useState("");
 
   const handleAdd = () => {
@@ -13,22 +19,25 @@ const Todo = () => {
     };
     const afterUpdate = [...task, newTask];
     setTask(afterUpdate);
+    setTitle("");
   };
 
-  const handleDelete = (id) => {
+  const handleDelete = useCallback((id) => {
     setTask((prev) => {
       return prev.filter((el) => {
         return el.id !== id;
       });
     });
-  };
-  const handleToggle = (id) => {
+  }, []);
+  const handleToggle = useCallback((id) => {
     setTask((prev) => {
       return prev.map((el) => {
         return el.id === id ? { ...el, status: !el.status } : el;
       });
     });
-  };
+  }, []);
+
+  useCallback(() => {}, []);
 
   return (
     <div>
