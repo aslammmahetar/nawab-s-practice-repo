@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "status": false
+    },
+    {
+      "title": "Learn JSON",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Learn html",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Learn ding",
+      "status": false,
+      "id": 4
+    }
+  ]
+}

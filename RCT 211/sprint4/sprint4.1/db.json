@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Learn HTML",
+      "status": false
+    },
+    {
+      "title": "learn react",
+      "status": true,
+      "id": 2
+    },
+    {
+      "title": "Learn REACT",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Learn JS",
+      "status": false,
+      "id": 4
+    }
+  ]
+}
