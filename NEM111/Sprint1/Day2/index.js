@@ -14,7 +14,10 @@ const server = http.createServer((req, res) => {
         } catch (error) {
             res.end(error)
         }
-    } else {
+    } else if (req.url == "/add/blog" && req.method == "POST") {
+        res.end("new Added")
+    }
+    else {
         res.end("invalid ding")
     }
 })
