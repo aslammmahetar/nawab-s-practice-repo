@@ -1,0 +1,6 @@
+HTTP Verbs/methods?
+GET => to read something from the server
+POST => to post/add something to server
+PUT =>  modification 
+PATCH => modification
+DELETE => To DELETE
