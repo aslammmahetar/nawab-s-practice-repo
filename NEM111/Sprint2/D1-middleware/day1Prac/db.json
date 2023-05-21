@@ -1,0 +1,20 @@
+{
+  "student": [
+    {
+      "name": "Aslam",
+      "age": 21,
+      "location": "Dhasa",
+      "studentcode": "fs23_0.760856218930219."
+    },
+    {
+      "name": "mahetar",
+      "age": 21,
+      "location": "Dhasa",
+      "studentcode": "fs23_0.8708929266002712."
+    }
+  ],
+  "cities": {
+    "Dhasa": "39c",
+    "ahmedabad": "35c"
+  }
+}

@@ -24,7 +24,7 @@ export const deleteData = (url) => {
     return axios.delete(url)
 }
 
-//
+//PUT
 export const putData = (id, data) => {
     return axios({
         method: "put",

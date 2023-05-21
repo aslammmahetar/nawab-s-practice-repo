@@ -1,0 +1,11 @@
+{
+  "users": [
+    { "name": "Aslam", "age": 12 },
+    { "name": "Sana", "age": 19 },
+    { "name": "Saad", "age": 21 }
+  ],
+  "posts": [
+    { "title": "Learn react", "body": "Learning React with nawab" },
+    { "title": "learning express", "body": "at 1:43" }
+  ]
+}

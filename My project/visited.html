@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visited Page</title>
+  <style>
+    /* All Your css here  */
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <h1>Masai Country Records</h1>
+    <a href="./index.html">Home</a>
+    <a href="./visited.html">Visited</a>
+  </div>
+  <h1 id="total">
+    You have visited total <span id="visited-total">0</span> countries.
+  </h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Country</th>
+        <th>Rank</th>
+        <th>Population</th>
+        <th>Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Here all rows will be appended  -->
+    </tbody>
+  </table>
+</body>
+<script>
+  // Write All JS Here
+
+  // local storage
+  let fromHome = JSON.parse(localStorage.getItem("visited")) || []
+
+  // data appending to dom
+  let tbody = document.querySelector("tbody")
+  function display(fromHome) {
+    tbody.innerHTML = ""
+    fromHome.forEach((elem, i) => {
+      let tr = document.createElement("tr")
+      let id = document.createElement("td")
+      id.innerText = elem.id
+      let country = document.createElement("td")
+      country.innerText = elem.country
+      let rank = document.createElement("td")
+      rank.innerText = elem.Rank
+      let population = document.createElement("td")
+      population.innerText = elem.population
+      let remove = document.createElement("td")
+      remove.innerText = "Remove"
+
+      // deleting part
+      remove.addEventListener("click", function () {
+        fromHome = fromHome.filter((element, index) => {
+          if (index == i) {
+            return false
+          } else {
+            return true
+          }
+        })
+
+        // span count part
+        let span = document.getElementById("visited-total")
+        span.innerText = +fromHome.length;
+        display(fromHome)
+
+        localStorage.setItem("visited", JSON.stringify(fromHome))
+      })
+
+      tr.append(id, country, rank, population, remove)
+      tbody.append(tr)
+    })
+  }
+  display(fromHome)
+
+  let span = document.getElementById("visited-total")
+  span.innerText = +fromHome.length;
+
+
+</script>
+
+</html>
