@@ -1,7 +1,10 @@
 const express = require("express")
 const contentRouter = express.Router()
 const jwt = require("jsonwebtoken")
+const { auth } = require("../Middleware/auth.middleware")
 
+
+//about / open route
 contentRouter.get("/about", (req, res) => {
     try {
         res.status(200).json({ msg: "This is the Content about page" })
@@ -10,34 +13,26 @@ contentRouter.get("/about", (req, res) => {
     }
 })
 
-contentRouter.get("/movie", (req, res) => {
-    const { token } = req.query
+
+//movies route
+contentRouter.get("/movie", auth, (req, res) => {
+    // console.log(token)
     try {
-        jwt.verify(token, 'nawab', (err, decoded) => {
-            if (decoded) {
-                res.status(200).json({ msg: "This is your movies" })
-            } else {
-                res.status(200).json({ msg: "not authorize" })
-            }
-        });
+        res.status(200).json({ msg: "This is your movies" })
     } catch (error) {
         res.status(400).json({ err: error.message })
     }
 })
 
-contentRouter.get("/series", (req, res) => {
-    const { token } = req.query
+
+//series route
+contentRouter.get("/series", auth, (req, res) => {
     try {
-        jwt.verify(token, 'nawab', (err, decoded) => {
-            if (decoded) {
-                res.status(200).json({ msg: "This is your series" })
-            } else {
-                res.status(200).json({ msg: "not authorize" })
-            }
-        });
+        res.status(200).json({ msg: "This is your series" })
     } catch (error) {
         res.status(400).json({ err: error.message })
     }
 })
 
 module.exports = { contentRouter }
+

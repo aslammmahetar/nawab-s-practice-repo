@@ -5,9 +5,16 @@ const userRouter = express.Router()
 
 const bcrypt = require("bcrypt")
 
+const { blackList } = require("../blacklist")
 const jwt = require("jsonwebtoken")
-userRouter.get('/', (req, res) => {
-    res.send('Hello World!')
+const { auth } = require("../Middleware/auth.middleware")
+userRouter.get('/', async (req, res) => {
+    try {
+        const user = await UserModel.find()
+        res.status(200).send(user)
+    } catch (error) {
+
+    }
 })
 
 
@@ -41,13 +48,18 @@ userRouter.post("/login", async (req, res) => {
     //
     const { email, pass } = req.body
     try {
-        const user = await UserModel.findOne({ email, })
+        const user = await UserModel.findOne({ email })
         if (user) {
             bcrypt.compare(pass, user.pass, function (err, result) {
                 // result == true
                 if (result) {
-                    const token = jwt.sign({ course: "Backend" }, "nawab")
-                    res.status(200).json({ msg: "login succesfully", token: token })
+                    const token = jwt.sign({ course: "Backend" }, "nawab", {
+                        expiresIn: 60
+                    })
+                    const refreshToken = jwt.sign({ course: "Backend" }, "aslam", {
+                        expiresIn: 180
+                    })
+                    res.status(200).json({ msg: "login succesfully", token, refreshToken })
                 } else {
                     res.status(200).json({ msg: "wrong credential" })
                 }
@@ -59,6 +71,17 @@ userRouter.post("/login", async (req, res) => {
         res.status(400).json({ msg: error.message })
     }
     //
+})
+
+//logout
+userRouter.get("/logout", (req, res) => {
+    const token = req.headers.authorization?.split(" ")[1]
+    try {
+        blackList.push(token)
+        res.status(200).json({ msg: "user has loggedout" })
+    } catch (error) {
+        res.status(400).json({ msg: error.message })
+    }
 })
 
 module.exports = { userRouter }
