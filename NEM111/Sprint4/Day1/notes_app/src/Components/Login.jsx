@@ -14,7 +14,7 @@ function Login() {
     };
     try {
       let req = await axios.post(
-        "http://localhost:1112/users/login",
+        "https://puce-zany-fox.cyclic.app/users/login",
         loginInfo
       );
       localStorage.setItem("token", req.data.token);

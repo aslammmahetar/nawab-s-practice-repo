@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 function Noets() {
   const [notes, setNotes] = useState([]);
   const getNotes = async () => {
-    fetch("http://localhost:1112/notes", {
+    fetch("https://puce-zany-fox.cyclic.app/notes", {
       method: "Get",
       headers: {
         "Content-Type": "application/json",

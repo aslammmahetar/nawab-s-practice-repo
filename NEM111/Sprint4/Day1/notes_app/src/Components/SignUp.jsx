@@ -16,7 +16,7 @@ function SignUp() {
     };
     try {
       let req = await axios.post(
-        "http://localhost:1112/users/register",
+        "https://puce-zany-fox.cyclic.app/users/register",
         userInfo
       );
       console.log(req);

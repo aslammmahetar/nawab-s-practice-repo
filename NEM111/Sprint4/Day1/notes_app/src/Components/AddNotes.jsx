@@ -12,7 +12,7 @@ const AddNotes = () => {
       body,
       category,
     };
-    fetch("http://localhost:1112/notes/create", {
+    fetch("https://puce-zany-fox.cyclic.app/notes/create", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
