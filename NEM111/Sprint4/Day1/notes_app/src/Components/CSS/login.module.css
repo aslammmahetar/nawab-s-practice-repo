@@ -1,0 +1,20 @@
+.loginform {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+    border: solid black;
+}
+
+.loginform>form {
+    padding: 20px;
+}
+
+.loginform>form :nth-child(2) {
+    margin-left: 27px;
+}
+
+.loginform>input {
+    width: 50%;
+    margin: auto;
+}
