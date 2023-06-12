@@ -5,6 +5,7 @@ import SignUp from "../Components/SignUp";
 import Home from "../Components/Home";
 import AddNotes from "../Components/AddNotes";
 import Noets from "../Components/Noets";
+import Edit from "../Components/Edit";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/signup" element={<SignUp />}></Route>
       <Route path="/addnotes" element={<AddNotes />}></Route>
       <Route path="/notes" element={<Noets />}></Route>
+      <Route path="/edit/:id" element={<Edit />}></Route>
     </Routes>
   );
 }
